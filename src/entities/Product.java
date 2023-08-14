@@ -43,6 +43,10 @@ public class Product {
 		return p.getName().toUpperCase(); 
 	}
 	
+	public String nonStaticFunctionNames() {
+		return this.getName().toUpperCase();
+	}
+	
 
 	@Override
 	public String toString() {

@@ -30,11 +30,14 @@ public class App04 {
 		System.out.println("---------------");
 		
 		List<String> prodNames2;
-		prodNames2 = prodList.stream().map(Product :: staticFunctionNames).collect(Collectors.toUnmodifiableList());
+		prodNames2 = prodList.stream().map(Product :: staticFunctionNames).collect(Collectors.toList());
 		prodNames2.forEach(System.out :: println);
 		System.out.println("---------------");
 		
-		
+		List<String> prodNames3;
+		prodNames3 = prodList.stream().map(Product :: nonStaticFunctionNames).collect(Collectors.toList());
+		prodNames3.forEach(System.out :: println);
+		System.out.println("---------------");
 		
 	}
 
