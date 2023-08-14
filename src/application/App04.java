@@ -46,6 +46,10 @@ public class App04 {
 		prodNames4.forEach(System.out :: println);
 		System.out.println("---------------");		
 		
+		List<String> prodNames5;
+		prodNames5 = prodList.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+		prodNames5.forEach(System.out :: println);
+		System.out.println("---------------");
 	}
 
 }
