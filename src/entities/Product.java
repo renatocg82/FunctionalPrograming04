@@ -38,6 +38,11 @@ public class Product {
 	public boolean nonStaticProductPredicate() {
 		return this.getPrice() >= 100.0;
 	}
+	
+	public static String staticFunctionNames(Product p) {
+		return p.getName().toUpperCase(); 
+	}
+	
 
 	@Override
 	public String toString() {

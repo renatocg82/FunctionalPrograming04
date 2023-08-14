@@ -29,6 +29,11 @@ public class App04 {
 		prodNames.forEach(System.out :: println);
 		System.out.println("---------------");
 		
+		List<String> prodNames2;
+		prodNames2 = prodList.stream().map(Product :: staticFunctionNames).collect(Collectors.toUnmodifiableList());
+		prodNames2.forEach(System.out :: println);
+		System.out.println("---------------");
+		
 		
 		
 	}
