@@ -50,6 +50,7 @@ public class App04 {
 		prodNames5 = prodList.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		prodNames5.forEach(System.out :: println);
 		System.out.println("---------------");
+		
 	}
 
 }
