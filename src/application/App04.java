@@ -3,6 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import entities.Product;
@@ -38,6 +39,12 @@ public class App04 {
 		prodNames3 = prodList.stream().map(Product :: nonStaticFunctionNames).collect(Collectors.toList());
 		prodNames3.forEach(System.out :: println);
 		System.out.println("---------------");
+		
+		List<String> prodNames4;
+		Function<Product, String > myFunc = p -> p.getName().toUpperCase();
+		prodNames4 = prodList.stream().map(myFunc).collect(Collectors.toList());
+		prodNames4.forEach(System.out :: println);
+		System.out.println("---------------");		
 		
 	}
 
